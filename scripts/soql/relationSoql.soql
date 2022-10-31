@@ -1,0 +1,14 @@
+
+select id, name, phone, account.name, account.industry from contact
+
+select id, name, phone, account.name, account.industry from contact where account.industry = 'Energy'
+
+select id, name,account.name,account.industry,account.website,account.active__c, phone from contact
+
+select id, name, subject__c, salesforce_project__c, salesforce_project__r.name, salesforce_project__r.status__c from salesforce_ticket__c
+
+//---------------------------------------------
+
+select id, name, annualrevenue, type, (select name, amount, stageName from opportunities where stageName = 'Closed Won') from account where type = 'Customer - Direct'
+
+select id, name,project_name__c, status__c, (select name, subject__c, priority__c from salesforce_tickets__r) from salesforce_project__c

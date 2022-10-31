@@ -1,0 +1,14 @@
+select count() from Contact
+
+select count(id) from Contact
+
+select count(id), count(mailingcity) from contact
+
+select leadsource, name from lead
+select leadsource, count(name) from lead group by leadsource
+select leadsource, count(name) from lead group by leadsource having count(name)>5
+
+select sum(amount), stageName from opportunity where isclosed = false group by stagename
+
+
+

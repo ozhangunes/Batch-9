@@ -1,0 +1,10 @@
+// PrimitiveDataTypeDemo p1= new PrimitiveDataTypeDemo();
+// p1.printBasicDataType();
+
+PrimitiveDataTypeDemo2 p2 = new PrimitiveDataTypeDemo2();
+//p2.printNewDate();
+// p2.printNewTime();
+ p2.printNewDateTime();
+
+
+
