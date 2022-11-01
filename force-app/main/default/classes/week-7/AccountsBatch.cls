@@ -1,6 +1,9 @@
+//updating description of all accounts
+//also getting statistics using stateful
 public class AccountsBatch implements Database.Batchable<SObject>, Database.Stateful{
     integer numberOfRecords = 0;
     integer count = 0;
+    //start method soql 
     public Database.QueryLocator start(Database.BatchableContext bc) {
         //write query
         //Sobject is Account
@@ -23,7 +26,7 @@ public class AccountsBatch implements Database.Batchable<SObject>, Database.Stat
 
         update scope;
     }
-
+    //finish method called once all recored are processed
     public void finish(Database.BatchableContext bc){
          System.debug('Finish method executed. Batch done. Simple');
         system.debug('count is ' + count);
